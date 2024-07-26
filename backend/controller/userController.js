@@ -7,6 +7,7 @@ import { sendEmail } from "../utils/sendEmail.js";
 import crypto from "crypto";
 // import {getResetPasswordToken} from "../router/userRouter.js"
 
+
 export const register = catchAsyncErrors(async (req, res, next) => {
   if (!req.files || Object.keys(req.files).length === 0) {
     return next(new ErrorHandler("Avatar and Resume are required", 400));
