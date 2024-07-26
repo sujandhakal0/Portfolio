@@ -194,11 +194,11 @@ const Home = () => {
                 <TooltipTrigger asChild>
                   <Link
                     className={`flex h-9 w-9 items-center justify-center rounded-lg ${
-                      active === "Messages"
+                      active === "Message"
                         ? "text-accent-foreground bg-accent"
                         : "text-muted-foreground"
                     } transition-colors hover:text-foreground md:h-8 md:w-8`}
-                    onClick={() => setActive("Messages")}
+                    onClick={() => setActive("Message")}
                   >
                     <Mails className="w-5 h-5" />
                     <span className="sr-only">Messages </span>
@@ -349,11 +349,11 @@ const Home = () => {
                 <Link
                   href="#"
                   className={`flex items-center gap-4 px-2.5 ${
-                    active === "Messages"
+                    active === "Message"
                       ? "text-foreground"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
-                  onClick={() => setActive("Messages")}
+                  onClick={() => setActive("Message")}
                 >
                   <Mails className="w-5 h-5" />
                   Messages
