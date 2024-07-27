@@ -19,9 +19,12 @@ const ViewProject = () => {
   useEffect(() => {
     const getProject = async () => {
       await axios
-        .get(`http://localhost:4000/api/v1/project/get/${id}`, {
-          withCredentials: true,
-        })
+        .get(
+          `https://portfolio-backend-91np.onrender.com/api/v1/project/get/${id}`,
+          {
+            withCredentials: true,
+          }
+        )
         .then((res) => {
           setTitle(res.data.project.title);
           setDescription(res.data.project.description);
@@ -64,11 +67,7 @@ const ViewProject = () => {
                 <div className="w-full sm:col-span-4">
                   <h1 className="text-2xl font-bold mb-4">{title}</h1>
                   <img
-                    src={
-                      projectBanner
-                        ? projectBanner
-                        : "/avatarHolder.jpg"
-                    }
+                    src={projectBanner ? projectBanner : "/avatarHolder.jpg"}
                     alt="projectBanner"
                     className="w-full h-auto"
                   />

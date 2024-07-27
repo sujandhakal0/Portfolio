@@ -49,9 +49,12 @@ const UpdateProject = () => {
   useEffect(() => {
     const getProject = async () => {
       await axios
-        .get(`http://localhost:4000/api/v1/project/update/${id}`, {
-          withCredentials: true,
-        })
+        .get(
+          `https://portfolio-backend-91np.onrender.com/api/v1/project/update/${id}`,
+          {
+            withCredentials: true,
+          }
+        )
         .then((res) => {
           setTitle(res.data.project.title);
           setDescription(res.data.project.description);
@@ -148,7 +151,6 @@ const UpdateProject = () => {
                       <input
                         type="text"
                         className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
-
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                       />
@@ -162,7 +164,6 @@ const UpdateProject = () => {
                   <div className="mt-2">
                     <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
                       <Textarea
-
                         value={description}
                         onChange={(e) => setDescription(e.target.value)}
                       />
@@ -176,7 +177,6 @@ const UpdateProject = () => {
                   <div className="mt-2">
                     <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
                       <Textarea
-
                         value={technologies}
                         onChange={(e) => setTechnologies(e.target.value)}
                       />

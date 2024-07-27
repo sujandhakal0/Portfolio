@@ -72,7 +72,7 @@ export const getAllApplications = () => async (dispatch) => {
   dispatch(applicationSlice.actions.getAllApplicationsRequest());
   try {
     const response = await axios.get(
-      "http://localhost:4000/api/v1/application/getall",
+      "https://portfolio-backend-91np.onrender.com/api/v1/application/getall",
       { withCredentials: true }
     );
     dispatch(
@@ -94,7 +94,7 @@ export const addNewApplication = (data) => async (dispatch) => {
   dispatch(applicationSlice.actions.addNewApplicationsRequest());
   try {
     const response = await axios.post(
-      "http://localhost:4000/api/v1/application/add",
+      "https://portfolio-backend-91np.onrender.com/api/v1/application/add",
       data,
       {
         withCredentials: true,
@@ -118,7 +118,7 @@ export const deleteApplication = (id) => async (dispatch) => {
   dispatch(applicationSlice.actions.deleteApplicationsRequest());
   try {
     const response = await axios.delete(
-      `http://localhost:4000/api/v1/application/delete/${id}`,
+      `https://portfolio-backend-91np.onrender.com/api/v1/application/delete/${id}`,
       {
         withCredentials: true,
       }
