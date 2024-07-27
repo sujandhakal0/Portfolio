@@ -7,7 +7,6 @@ import ManageProjects from "./pages/ManageProjects";
 import ManageSkills from "./pages/ManageSkills";
 import ManageTimeline from "./pages/ManageTimeline";
 import ResetPassword from "./pages/ResetPassword";
-import ViewProject from "./pages/ViewProject";
 import UpdateProject from "./pages/UpdateProject";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,6 +18,7 @@ import { getAllTimeline } from "./store/slices/timelineSlice";
 import { getAllSkills } from "./store/slices/skillSlice";
 import { getAllApplications } from "./store/slices/applicationSlice";
 import { getAllProjects } from "./store/slices/projectSlice";
+import ViewProject from "./pages/ViewProject";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -41,8 +41,8 @@ const App = () => {
         <Route path="/manage/skills" element={<ManageSkills />} />
         <Route path="/manage/timeline" element={<ManageTimeline />} />
         <Route path="/manage/projects" element={<ManageProjects />} />
-        <Route path="/view/projects/:id" element={<ViewProject />} />
-        <Route path="/update/projects/:id" element={<UpdateProject />} />
+        <Route path="/view/project/:id" element={<ViewProject />} />
+        <Route path="/update/project/:id" element={<UpdateProject />} />
       </Routes>
       <ToastContainer position="top-center" theme="dark" />
     </Router>
