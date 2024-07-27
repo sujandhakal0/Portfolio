@@ -117,7 +117,7 @@ export const login = (email, password) => async (dispatch) => {
       { withCredentials: true, headers: { "Content-Type": "application/json" } }
     );
     dispatch(userSlice.actions.LoginSuccess(data.user));
-    dispatch(userSlice.actions.clearAllErrors);
+    dispatch(userSlice.actions.clearAllErrors());
   } catch (error) {
     dispatch(userSlice.actions.LoginFailed(error.response.data.message));
   }
@@ -130,7 +130,7 @@ export const getUser = () => async (dispatch) => {
       withCredentials: true,
     });
     dispatch(userSlice.actions.loaduserSuccess(data.user));
-    dispatch(userSlice.actions.clearAllErrors);
+    dispatch(userSlice.actions.clearAllErrors());
   } catch (error) {
     dispatch(userSlice.actions.loadUserFailed(error.response.data.message));
   }
@@ -144,7 +144,7 @@ export const logout = () => async (dispatch) => {
       }
     );
     dispatch(userSlice.actions.logoutSuccess(data.message));
-    dispatch(userSlice.actions.clearAllErrors);
+    dispatch(userSlice.actions.clearAllErrors());
   } catch (error) {
     dispatch(userSlice.actions.logoutFailed(error.response.data.message));
   }
@@ -163,7 +163,7 @@ export const updatePassword =
         }
       );
       dispatch(userSlice.actions.updatePasswordSuccess(data.message));
-      dispatch(userSlice.actions.clearAllErrors);
+      dispatch(userSlice.actions.clearAllErrors());
     } catch (error) {
       dispatch(
         userSlice.actions.updatePasswordFaild(error.response.data.message)
@@ -183,7 +183,7 @@ export const updateProfile = (newData) => async (dispatch) => {
       }
     );
     dispatch(userSlice.actions.updateProfileSuccess(data.message));
-    dispatch(userSlice.actions.clearAllErrors);
+    dispatch(userSlice.actions.clearAllErrors());
   } catch (error) {
     dispatch(userSlice.actions.updateProfileFaild(error.response.data.message));
   }
