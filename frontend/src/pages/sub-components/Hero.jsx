@@ -13,6 +13,7 @@ const Hero = () => {
   useEffect(() => {
     const getProfile = async () => {
       try {
+        // https://portfolio-backend-91np.onrender.com
         const { data } = await axios.get(
           "https://portfolio-backend-91np.onrender.com/api/v1/user/me",
           {
