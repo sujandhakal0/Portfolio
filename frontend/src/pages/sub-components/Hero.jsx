@@ -59,7 +59,7 @@ const Hero = () => {
         className="  w-fit  py-2  rounded-[20px] flex gap-5 
       items-center mt-2"
       >
-        <Link to={user.linkedInURL} target="_blank">
+        <Link to={`${portfolioURL}/${user.linkedInURL}`} target="_blank">
           <FaLinkedin className=" w-7 h-7 dark:text-blue-400 text-blue-600 dark:hover:text-blue-500 hover:text-blue-300" />
         </Link>
         <Link to={user.instaURL} target="_blank">
