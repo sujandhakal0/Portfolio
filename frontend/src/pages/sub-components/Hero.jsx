@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
 const Hero = () => {
+  const portfolioURL = "https://portfolio-ecru-one-83.vercel.app";
   const [user, setUser] = useState({});
 
   useEffect(() => {
