@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
 const Hero = () => {
+
   const [user, setUser] = useState({});
 
   useEffect(() => {
@@ -15,7 +16,7 @@ const Hero = () => {
       try {
         // https://portfolio-backend-91np.onrender.com
         const { data } = await axios.get(
-          "https://portfolio-backend-91np.onrender.com/api/v1/user/me",
+          "https://portfolio-backend-91np.onrender.com/api/v1/user/portfolio/me",
           {
             withCredentials: true,
           }
@@ -80,7 +81,7 @@ const Hero = () => {
           </Button>
         </Link>
       </div>
-      <p className="mt-8 text-xl tracking-[2px]">{user.aboutMe}</p>
+       <p className="mt-8 text-xl tracking-[2px]">{user.aboutMe}</p>
       <hr className="my-8 md::my-10 " />
     </div>
   );
