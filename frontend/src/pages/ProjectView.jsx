@@ -78,7 +78,7 @@ const ProjectView = () => {
                       : "/avatarHolder.jpg"
                   }
                   alt="projectBanner"
-                  className="w-full h-auto"
+                  className="w-full h-auto bg-[#020817]"
                 />
               </div>
               <div className="w-full sm:col-span-4">
